@@ -1,0 +1,30 @@
+{
+  "name": "studentstartupswebsite",
+  "version": "0.1.0",
+  "description": "Website and a web based platform for the functioning of StudentStartups",
+  "scripts": {
+    "start": "node ./bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/colabventures/studentstartups_website.git"
+  },
+  "author": "",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/colabventures/studentstartups_website/issues"
+  },
+  "homepage": "https://github.com/colabventures/studentstartups_website#readme",
+  "dependencies": {
+    "async": "^1.4.2",
+    "body-parser": "^1.14.1",
+    "bower": "^1.6.5",
+    "cookie-parser": "^1.4.0",
+    "ejs": "^2.3.4",
+    "express": "^4.13.3",
+    "mongodb": "^2.0.47",
+    "morgan": "^1.6.1",
+    "serve-favicon": "^2.3.0"
+  }
+}
