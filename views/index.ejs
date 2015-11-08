@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Student Startups</title>
+    <!-- Change bootstrap links to CDN -->
     <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="/stylesheets/main.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
@@ -9,9 +10,10 @@
     <script type="text/javascript" src="/javascripts/scroll.js"></script>
 </head>
 <body>
-<section id="top" class="page-section">
+<section id="top" class="page-section background">
+    <!-- Logo and header go here -->
     <!-- Nav Bar -->
-    <nav class="container-fluid navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav class="container-fluid navbar navbar-default" role="navigation">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#NavBarFix">
                 <span class="icon-bar"></span>
@@ -21,26 +23,125 @@
         </div>
         <div class="collapse navbar-collapse" id="NavBarFix">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#" class="white scroll-link">HOME</a></li>
-                <li><a href="#" class="white scroll-link">ABOUT US</a></li>
-                <li><a href="#" class="white scroll-link">CAREER</a></li>
-                <li><a href="#" class="white scroll-link">CONTACT</a></li>
+                <li><a href="#" class="scroll-link">HOME</a></li>
+                <li><a href="#" class="scroll-link">FAQ</a></li>
+                <li><a href="#" class="scroll-link">ABOUT</a></li>
+                <li><a href="#" class="scroll-link">CONTACT</a></li>
             </ul>
         </div>
     </nav>
-    <div class="container-fluid" style="margin-top: 5%">
-        <div class="row">
-            <div class="col-xs-12 col-sm-6">
-                <img src="" alt="Image 1" class="img-responsive"/>
+    <div class="container-fluid full-height" style="margin-top: 0;padding-top: 0;border: none;">
+        <div class="row full-height">
+            <div class="col-xs-12 col-sm-6 cover-one text-center">
+                <div class="col-sm-offset-2 col-sm-8">
+                    <h1>
+                        Why outsource when you could insource?
+                    </h1>
+
+                    <p class="lead">
+                        Get projects completed by affordable, talented students and grads, looking to add pieces to
+                        their portfolios and possibly a full-time job.
+                    </p>
+                    <a href="#">
+                        <div class="buttons">
+                            <p class="lead">Post A Project</p>
+                        </div>
+                    </a>
+                </div>
             </div>
-            <div class="col-xs-12 col-sm-6">
-                <img src="" alt="Image 2" class="img-responsive"/>
+            <div class="col-xs-12 col-sm-6 cover-two text-center">
+                <div class="col-sm-offset-2 col-sm-8">
+                    <h1>
+                        Why intern when you could freelance?
+                    </h1>
+
+                    <p class="lead">
+                        Apply to projects that expand your network, add beautiful pieces to your portfolio and give you
+                        enough experience for a full-time job.
+                    </p>
+                    <a href="#">
+                        <div class="buttons">
+                            <p class="lead">Gain Experience</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="2" class="page-section">
+    <div class="container-fluid full-height">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="text-center">
+                    <h1 id="caption-1">Project Based Internships</h1>
+                </div>
+                <br />
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-12 text-center">
-                <span class="glyphicon glyphicon-chevron-down"></span>
+            <div class="col-xs-12 col-sm-offset-1 col-sm-10">
+                <p class="lead">This is a web platform that connects employers, who need projects completed, with
+                    talented students and grads, who need flexible experience opportunities and possibly a full-time
+                    job.</p>
             </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 flow">
+                <div class="col-xs-12">
+                    <p class="text-center lead">
+                        Register
+                    </p>
+                </div>
+                <div class="col-xs-12">
+                    <div class="text-center lead">
+                        <span class="glyphicon glyphicon-arrow-down"></span>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <p class="text-center lead">
+                        Activate
+                    </p>
+                </div>
+                <div class="col-xs-12">
+                    <div class="text-center lead">
+                        <span class="glyphicon glyphicon-arrow-down"></span>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <p class="text-center lead">
+                        Post Project/Request for One
+                    </p>
+                </div>
+                <div class="col-xs-12">
+                    <div class="text-center lead">
+                        <span class="glyphicon glyphicon-arrow-down"></span>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <p class="text-center lead">
+                        Start Project
+                    </p>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <h1 id="caption-2">
+                    There's no other simpler way.
+                </h1>
+                <br />
+                <br />
+                <ol>
+                    <li class="lead">Register. Fill in your complete profile.</li>
+                    <li class="lead">Activate your account.</li>
+                    <li class="lead">Start posting projects or applying for the ones available.</li>
+                    <li class="lead">Wait for the responses through mail and then get hacking.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row footer">
+            <p class="text-muted">Copyright. All rights reserved &copy; StudentStartups.io</p>
         </div>
     </div>
 </section>

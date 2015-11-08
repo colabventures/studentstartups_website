@@ -1,15 +1,89 @@
 html {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    background-color: rgba(242, 242, 242, 0.4);
-    font-family: 'Montserrat', sans-serif;
-    color: rgb(65, 79, 102);
-    height: 100%;
-    text-align: left;
+  background-color: rgba(242, 242, 242, 0.4);
+  font-family: 'Montserrat', sans-serif;
+  height: 100%;
+  text-align: left;
 }
 
 section {
-    min-height: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+nav {
+  border-radius: 0!important;
+  margin: 0!important;
+  z-index: 2!important;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.cover-one {
+  padding: 4%;
+  background-color: rgba(0, 255, 255, 0.5);
+  color: white;
+  min-height: 92%;
+}
+
+.cover-two {
+  padding: 4%;
+  background-color: rgba(169, 169, 169, 0.5);
+  color: white;
+  min-height: 92%;
+}
+
+.background {
+  background-image: url('/images/image1.jpg'); /* put relative URL for image*/
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.buttons {
+  padding: 3%;
+  margin: 4%;
+  background-color: white;
+}
+
+.buttons p {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+#top div div div div > h1 {
+  margin-top: 35%;
+}
+
+.flow p {
+  font-weight: bold;
+  padding: 2%;
+  margin: 1%;
+}
+
+.footer {
+  background: rgba(0,0,0,0.5);
+  height: 50px;
+  text-align: center;
+}
+
+.footer p {
+  color: whitesmoke;
+  text-align: center;
+  padding: 1%;
+}
+
+#caption-1, #caption-2 {
+  color: #0b97c4;
 }
