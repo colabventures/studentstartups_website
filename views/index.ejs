@@ -1,149 +1,214 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-<head>
-    <title>Student Startups</title>
-    <!-- Change bootstrap links to CDN -->
-    <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="/stylesheets/main.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/javascripts/scroll.js"></script>
-</head>
-<body>
-<section id="top" class="page-section background">
-    <!-- Logo and header go here -->
-    <!-- Nav Bar -->
-    <nav class="container-fluid navbar navbar-default" role="navigation">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#NavBarFix">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-        </div>
-        <div class="collapse navbar-collapse" id="NavBarFix">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#" class="scroll-link">HOME</a></li>
-                <li><a href="#" class="scroll-link">FAQ</a></li>
-                <li><a href="#" class="scroll-link">ABOUT</a></li>
-                <li><a href="#" class="scroll-link">CONTACT</a></li>
-            </ul>
-        </div>
-    </nav>
-    <div class="container-fluid full-height" style="margin-top: 0;padding-top: 0;border: none;">
-        <div class="row full-height">
-            <div class="col-xs-12 col-sm-6 cover-one text-center">
-                <div class="col-sm-offset-2 col-sm-8">
-                    <h1>
-                        Why outsource when you could insource?
-                    </h1>
+    <head>
+        <title>StudentStartups  </title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+        <link rel="stylesheet" href="/stylesheets/main.css" />
+        <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+        <link rel="icon" type="image/png" href="/images/bulb_logo_black.png">
 
-                    <p class="lead">
-                        Get projects completed by affordable, talented students and grads, looking to add pieces to
-                        their portfolios and possibly a full-time job.
-                    </p>
-                    <a href="#">
-                        <div class="buttons">
-                            <p class="lead">Post A Project</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 cover-two text-center">
-                <div class="col-sm-offset-2 col-sm-8">
-                    <h1>
-                        Why intern when you could freelance?
-                    </h1>
+        <!-- start Mixpanel -->
 
-                    <p class="lead">
-                        Apply to projects that expand your network, add beautiful pieces to your portfolio and give you
-                        enough experience for a full-time job.
-                    </p>
-                    <a href="#">
-                        <div class="buttons">
-                            <p class="lead">Gain Experience</p>
+            <script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+                for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f)}})(document,window.mixpanel||[]);
+                
+                mixpanel.init("30be82dec6bc83baac061e2905b8e78b");</script>
+
+        <!-- end Mixpanel -->
+    </head>
+    <body class="landing">
+        <div id="page-wrapper">
+
+            <!-- Header -->
+                <header id="header" class="alt">
+                    <h1><a href="/"><img src="/images/logo.png" height="68px"/></a></h1>
+                    <nav id="nav">
+                        <!-- 
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#">The Team</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="#" class="icon fa-angle-down">The Team</a></li>
+                            <li><a href="#" class="button">Sign Up</a></li>
+                        </ul>
+                    -->
+                    </nav>
+                </header>
+
+            <!-- Banner -->
+                <section id="banner">
+                    <h2>Collaboration Begins Here!</h2>
+                    <p>Work with awesome students on amazing ideas and startups!</p>
+                    <ul class="actions">
+                        <li><a href="#input" class="smoothScroll"><img src="/images/down.png" height="50px" /></a></li>
+                    <!--    <li><a href="#" class="button">Learn More</a></li>-->
+                    </ul>
+                    <a name="input"></a>
+                </section>
+
+
+
+            <!-- Main -->
+                <section id="main" class="container">
+                    
+
+                    <div class="row">
+                        <div class="6u 12u(narrower)">
+
+                            <section class="box special">
+
+                                <!--<span class="image featured"><img src="images/pic02.jpg" alt="" /></span>-->
+                                <h3>Got Skills?</h3>
+                                <p>Tell us which tools or skills you're good at and we'll use those to find you awesome ideas and teams to work with!</p>
+                                <ul class="actions">
+                                    <li>
+                                        <a class="typeform-share link" href="https://studentstartups.typeform.com/to/ZFKYNv" data-mode="2" target="_blank"> <button class="button alt"> <script type="text/javascript">mixpanel.track("Clicked on Skills Form"); </script>I've Got SKILLS!</button></a>
+                                        <script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'share.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}})()</script>
+
+
+                                </ul>
+
+                            </section>
+
                         </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="2" class="page-section">
-    <div class="container-fluid full-height">
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="text-center">
-                    <h1 id="caption-1">Project Based Internships</h1>
-                </div>
-                <br />
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 col-sm-offset-1 col-sm-10">
-                <p class="lead">This is a web platform that connects employers, who need projects completed, with
-                    talented students and grads, who need flexible experience opportunities and possibly a full-time
-                    job.</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 col-sm-6 flow">
-                <div class="col-xs-12">
-                    <p class="text-center lead">
-                        Register
-                    </p>
-                </div>
-                <div class="col-xs-12">
-                    <div class="text-center lead">
-                        <span class="glyphicon glyphicon-arrow-down"></span>
+                        <div class="6u 12u(narrower)">
+
+                            <section class="box special">
+                                <!--<span class="image featured"><img src="images/pic03.jpg" alt="" /></span>-->
+                                <h3>Got an Idea?</h3>
+                                <p>Tell us what skillsets you're looking for and we'll find brilliant students that you can form teams with!</p>
+                                <ul class="actions">
+                                    <li>
+                                        <a class="typeform-share link" href="https://studentstartups.typeform.com/to/NDlT3E" data-mode="2" target="_blank"><button class="button alt"><script type="text/javascript">mixpanel.track("Clicked on Ideas Form"); </script>I've Got An IDEA!</button></a>
+                                        <script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'share.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}})()
+                                        </script>
+
+
+                                    </li>
+                                </ul>
+                            </section>
+
+                        </div>
                     </div>
-                </div>
-                <div class="col-xs-12">
-                    <p class="text-center lead">
-                        Activate
-                    </p>
-                </div>
-                <div class="col-xs-12">
-                    <div class="text-center lead">
-                        <span class="glyphicon glyphicon-arrow-down"></span>
-                    </div>
-                </div>
-                <div class="col-xs-12">
-                    <p class="text-center lead">
-                        Post Project/Request for One
-                    </p>
-                </div>
-                <div class="col-xs-12">
-                    <div class="text-center lead">
-                        <span class="glyphicon glyphicon-arrow-down"></span>
-                    </div>
-                </div>
-                <div class="col-xs-12">
-                    <p class="text-center lead">
-                        Start Project
-                    </p>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-6">
-                <h1 id="caption-2">
-                    There's no other simpler way.
-                </h1>
-                <br />
-                <br />
-                <ol>
-                    <li class="lead">Register. Fill in your complete profile.</li>
-                    <li class="lead">Activate your account.</li>
-                    <li class="lead">Start posting projects or applying for the ones available.</li>
-                    <li class="lead">Wait for the responses through mail and then get hacking.</li>
-                </ol>
-            </div>
+
+
+                    
+<!--
+                    <section class="box special features">
+                        <header class="major">
+                            <h2>Join these amazing teams!</h2>
+                        </header>
+                        <div class="features-row">
+                            <section>
+                                <span class="icon major fa-bolt accent2"></span>
+                                <h3>ChaTale</h3>
+                                <p>An online tea subscription service that offers a new  tea  tasting  experience  every  month! ChaTale has the most interesting and unusual teas ourced from independent tea farms around the globe to give its customers an amazing taste. ChaTale aims to open your mind and tastebuds to the world of tea. </p>
+                                <p><strong>Skill Set : </strong>HTML, CSS3, Java Script </p>
+                                <ul class="actions">
+                                    <li><a href="#" class="button alt">Join the team!</a></li>
+                                </ul>
+                            </section>
+                            <section>
+                                <span class="icon major fa-area-chart accent3"></span>
+                                <h3>KickAbout</h3>
+                                <p>A Sports meet up app created by UCL Students. Winner of the London Entrepreneurs Challange award 2015.</p>
+                                <p><strong>Skill Set : </strong>Product Designer</p>
+                                <ul class="actions">
+                                    <li><a href="#" class="button alt">Join the team!</a></li>
+                                </ul>
+                            </section>              
+                        </div>
+                        <div class="features-row">
+                            <section>
+                                <span class="icon major fa-cloud accent4"></span>
+                                <h3>Urban Intelligence</h3>
+                                <p>Urban planning portal / aggregator.</p>
+                                <p><strong>Skill Set : </strong>HTML, CSS3, Java Script </p>
+                                <ul class="actions">
+                                    <li><a href="#" class="button alt">Join the team!</a></li>
+                                </ul>
+                            </section>
+                            <section>
+                                <span class="icon major fa-lock accent5"></span>
+                                <h3>HelloHub</h3>
+                                <p>A geo social networking app App.</p>
+                                <p><strong>Skill Set : </strong>iOS App Developer<br/>
+                                <strong>Skill Set : </strong>Product Designer</p>
+                                <ul class="actions">
+                                    <li><a href="#" class="button alt">Join the team!</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                            <section>
+                                <ul class="actions">
+                                    <li><a href="#" class="button alt">More Ideas.. </a></li>
+                                </ul>
+                            </section>  
+                    </section>
+
+                    <section class="box special">
+                        <header class="major">
+                            <h2>Introducing the ultimate mobile app
+                            <br />
+                            for doing stuff with your phone</h2>
+                            <p>Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc ornare<br />
+                            adipiscing nunc adipiscing. Condimentum turpis massa.</p>
+                        </header>
+                        <span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
+                    </section>
+                    
+                </section>
+-->
+            <!-- CTA -->
+                <section id="cta">
+
+                    <h2>Sign up for an exclusive <img src="/images/slack.png" height="40px" />Slack invite</h2>
+                    <p>You can join our exclusive university network using your university email ID.</p>
+
+                    <ul class="actions">
+                        <li><a href="https://studentstartups-ucl.slack.com/signup" class="button alt" target="_blank"><script type="text/javascript">mixpanel.track("Slack Invite"); </script>Invite Me!</a></li>
+                    </ul>
+
+                </section>
+
+            <!-- Footer -->
+                <footer id="footer">
+                    <ul class="icons">
+                        <li><a href="https://twitter.com/s_startups" class="icon fa-twitter" target="_blank"><span class="label"><script type="text/javascript">mixpanel.track("Twitter"); </script>Twitter</span></a></li>
+                        <li><a href="https://www.facebook.com/Student-Startups-1545270772387813/" class="icon fa-facebook" target="_blank"><span class="label"><script type="text/javascript">mixpanel.track("Facebook"); </script>Facebook</span></a></li>
+                        <li><a href="https://www.instagram.com/studentstartups/" class="icon fa-instagram" target="_blank"><span class="label"><script type="text/javascript">mixpanel.track("Instagram"); </script>Instagram</span></a></li>
+                        <li><a href="mailto:begin@studentstartups.io?Subject=More%20Information" target="_top" class="icon fa-envelope"><span class="label"><script type="text/javascript">mixpanel.track("Mail"); </script>Mail</span></a></li>
+                        <!--<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+                        <li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>-->
+                    </ul>
+                    <ul class="copyright">
+                        <li>&copy; CoLab Ventures. All rights reserved.</li>
+                    </ul>
+                </footer>
+
         </div>
-    </div>
-    <div class="container-fluid">
-        <div class="row footer">
-            <p class="text-muted">Copyright. All rights reserved &copy; StudentStartups.io</p>
-        </div>
-    </div>
-</section>
-</body>
+
+        <!-- Scripts -->
+            <script src="/javascripts/jquery.min.js"></script>
+            <script src="/javascripts/jquery.dropotron.min.js"></script>
+            <script src="/javascripts/jquery.scrollgress.min.js"></script>
+            <script src="/javascripts/skel.min.js"></script>
+            <script src="/javascripts/util.js"></script>
+            <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+            <script src="/javascripts/main.js"></script>
+        
+        <!-- Smooth Scroll-->
+
+            <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+            <script type="text/javascript" src="/javascripts/smoothscroll.js"></script>
+
+        <!-- Clicky Script  
+            <a title="Web Analytics" href="http://clicky.com/100816842"><img alt="Web Analytics" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a>
+            <script src="//static.getclicky.com/js" type="text/javascript"></script>
+            <script type="text/javascript">try{ clicky.init(100816842); }catch(e){}</script>
+            <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100816842ns.gif" /></p></noscript>
+        -->
+    </body>
 </html>
