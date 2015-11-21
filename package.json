@@ -18,11 +18,14 @@
   "homepage": "https://github.com/colabventures/studentstartups_website#readme",
   "dependencies": {
     "async": "^1.4.2",
+    "bcrypt": "^0.8.5",
     "body-parser": "^1.14.1",
     "bower": "^1.6.5",
     "cookie-parser": "^1.4.0",
+    "crypto": "0.0.3",
     "ejs": "^2.3.4",
     "express": "^4.13.3",
+    "express-mongo-db": "^2.0.3",
     "mongodb": "^2.0.47",
     "morgan": "^1.6.1",
     "serve-favicon": "^2.3.0"
