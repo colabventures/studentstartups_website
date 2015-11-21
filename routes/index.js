@@ -25,18 +25,14 @@ router.post('/signup', function (req, res) {
   let data = {
     _id: req.body.email
   };
-  const onGenerateHash = function (err, buf) {
-    data.token = buf.toString('hex');
-    data.expire = Date.now() + 86400000;
-    const onSignUp = function (err, doc) {
-      if (!err) {
-        res.cookie('name', data._id, {signed: true, maxAge: 86400000000});
-        res.redirect('/home');
-      }
-    };
-    loginApi.signUp(app, data, onSignUp);
+
+  const onSignUp = function (err, doc) {
+    if (!err) {
+      res.cookie('name', doc._id, {signed: true, maxAge: 86400000000});
+      res.redirect('/home');
+    }
   };
-  crypto.randomBytes(20, onGenerateHash);
+  loginApi.signUp(app, data, onSignUp);
 });
 
 router.get('/login', function (req, res) {
@@ -51,7 +47,7 @@ router.post('/login', function (req, res) {
   let app = {
     db: req.db
   };
-  let onLogin = function (data) {
+  let onLogin = function (err, data) {
     res.cookie('name', data._id, {signed: true, maxAge: 86400000000});
     res.redirect('/home');
   };

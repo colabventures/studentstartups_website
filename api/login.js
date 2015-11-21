@@ -4,6 +4,7 @@ var path = require('path');
 var bcrypt = require('bcrypt');
 
 var mongoUsers = require(path.join(__dirname, '..', 'db', 'mongo-users'));
+var email = require(path.join(__dirname, '..', 'worker', 'email'));
 
 exports.login = function (app, data, callback) {
   const onLogin = function (err, doc) {
@@ -18,12 +19,25 @@ exports.login = function (app, data, callback) {
 };
 
 exports.signUp = function (app, data, callback) {
-  const onInsert = function (err, doc) {
-    if (!err) {
-      callback(null, doc);
-    }
+  const onGenerateHash = function (err, buf) {
+    data.token = buf.toString('hex');
+    data.expire = Date.now() + 86400000;
+    const onInsert = function (err) {
+      if (!err) {
+        const onSend = function (err) {
+          if (!err) {
+            callback(null, data);
+          }
+          else {
+            callback('Email Sending Error', data);
+          }
+        };
+        email.register(data, onSend);
+      }
+    };
+    mongoUsers.insert(app, data, onInsert);
   };
-  mongoUsers.insert(app, data, onInsert);
+  crypto.randomBytes(20, onGenerateHash);
 };
 
 exports.getVerify = function (app, data, callback) {
