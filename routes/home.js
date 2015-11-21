@@ -13,7 +13,7 @@ var authenticated = function (req, res, next) {
   }
 };
 
-router.get('/', authenticated, function(req, res) {
+router.get('/', authenticated, function (req, res) {
   let app = {
     db: req.db
   };

@@ -25,7 +25,6 @@ router.post('/signup', function (req, res) {
   let data = {
     _id: req.body.email
   };
-
   const onSignUp = function (err, doc) {
     if (!err) {
       res.cookie('name', doc._id, {signed: true, maxAge: 86400000000});

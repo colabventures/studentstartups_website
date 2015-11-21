@@ -34,7 +34,7 @@ exports.verify = function (app, data, callback) {
       expire: null
     }
   };
-  const onUpdate = function (err, doc){
+  const onUpdate = function (err, doc) {
     if (err) {
       callback(true, data);
     }
