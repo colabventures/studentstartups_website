@@ -58,12 +58,16 @@
 <body>
 <div class="container">
     <div class="wrapper">
-        <form action="/signup" method="post" name="signUpForm" class="form-signin">
-            <h3 class="form-signin-heading">Please Enter your UCL Email only</h3>
+        <form action="/home/profile" method="post" name="signUpForm" class="form-signin">
+            <h3 class="form-signin-heading">Please Enter the following details</h3>
             <hr/>
             <br>
 
-            <input type="text" class="form-control" name="email" placeholder="Email" required autofocus/>
+            <input type="text" class="form-control" name="name" placeholder="Name" required autofocus/>
+            <input type="text" class="form-control" name="skill_1" placeholder="Core Skill 1" required/>
+            <input type="text" class="form-control" name="skill_2" placeholder="Core Skill 2" required/>
+            <input type="text" class="form-control" name="skill_3" placeholder="Core Skill 3" required/>
+            <input type="text" class="form-control" name="position" placeholder="Position you would like to work at" required/>
 
             <button class="btn btn-lg btn-primary btn-block" name="Submit" value="Login" type="Submit">Submit</button>
         </form>
@@ -75,7 +79,7 @@
 <script src="/javascripts/skel.min.js"></script>
 <script src="/javascripts/util.js"></script>
 <!--[if lte IE 8]>
-<script src="assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="/javascripts/ie/respond.min.js"></script><![endif]-->
 <script src="/javascripts/main.js"></script>
 <!-- Smooth Scroll-->
 <script type="text/javascript" src="/javascripts/smoothscroll.js"></script>

@@ -13,11 +13,7 @@ exports.login = function (app, data, callback) {
       callback(null, data);
     }
     else {
-      const onInsert = function (err) {
-        if (!err) {
-          callback(null, data);
-        }
-      };
+      callback(true, null);
     }
   };
   collection.findOne(data, onFetch);
@@ -66,4 +62,23 @@ exports.insert = function (app, data, callback) {
     }
   };
   collection.insertOne(data, onInsert);
+};
+
+exports.updateProfile = function (app, data, callback) {
+  let collection = app.db.collection('users');
+  const onUpdate = function (err) {
+    if (!err) {
+      callback(null);
+    }
+    else {
+      callback(err);
+    }
+  };
+  collection.findAndModify({_id: data._id}, {
+    $set: {
+      name: data.name,
+      position: data.position,
+      skills: data.skills
+    }
+  }, onUpdate);
 };

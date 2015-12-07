@@ -12,3 +12,12 @@ exports.find = function (app, data, callback) {
   };
   mongoUsers.find(app, data, onFetch);
 };
+
+exports.profile = function (app, data, callback) {
+  const onUpdate = function (err) {
+    if (!err) {
+      callback(null);
+    }
+  };
+  mongoUsers.updateProfile(app, data, onUpdate);
+};

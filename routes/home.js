@@ -21,7 +21,7 @@ router.get('/', authenticated, function (req, res) {
     _id: req.signedCookies.name
   };
   const onFind = function (err, data) {
-    if (data.token) {
+    if (data.token && data.expire) {
       if (data.name) {
         res.render('home', {user: data})
       }
@@ -39,6 +39,27 @@ router.get('/', authenticated, function (req, res) {
 router.get('/profile', authenticated, function (req, res) {
   //add profile
   res.render('profile');
+});
+
+router.post('/profile', authenticated, function (req, res) {
+  let data = {
+    _id: req.signedCookies.name,
+    name: req.body.name,
+    position: req.body.position,
+    skills: []
+  };
+  for (i = 1;i <= 3;i++) {
+    data.skills.push(req.body.skill_+i);
+  }
+  let app = {
+    db: req.db
+  };
+  const onUpdate = function (err) {
+    if (!err) {
+      res.redirect('/home');
+    }
+  };
+  userApi.profile(app, data, onUpdate);
 });
 
 router.get('/verify/:token', authenticated, function (req, res) {
