@@ -60,3 +60,27 @@ exports.verify = function (app, data, callback) {
   };
   mongoUsers.verify(app, data, onVerify);
 };
+
+exports.reset = function (app, data, callback) {
+  const onGenerateHash = function (err, buf) {
+    data.token = buf.toString('hex');
+    data.expire = null;
+    const onResetToken = function (err) {
+      const onSend = function (err) {
+        if (!err) {
+          callback(null);
+        }
+        else {
+          callback(err);
+        }
+      };
+      email.reset(data, onSend);
+    };
+    mongoUsers.reset(app, data, onResetToken);
+  };
+  crypto.randomBytes(20, onGenerateHash);
+};
+
+exports.passwordReset = function (app, data, callback) {
+  mongoUsers.passwordReset(app, data, callback);
+};

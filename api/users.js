@@ -1,6 +1,7 @@
 'use strict';
 
 var path = require('path');
+var crypto = require('crypto');
 
 var mongoUsers = require(path.join(__dirname, '..', 'db', 'mongo-users'));
 

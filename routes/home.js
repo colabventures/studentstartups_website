@@ -30,7 +30,7 @@ router.get('/', authenticated, function (req, res) {
       }
     }
     else {
-      res.render('verify');
+      res.render('email');
     }
   };
   userApi.find(app, data, onFind);
@@ -72,7 +72,7 @@ router.get('/verify/:token', authenticated, function (req, res) {
   };
   const onVerify = function (err) {
     if (!err) {
-      res.render('password');
+      res.render('verify');
     }
   };
   loginApi.getVerify(app, data, onVerify);

@@ -20,3 +20,13 @@ exports.register = function (data, callback) {
   };
   server.send(message, callback);
 };
+
+exports.reset = function (data, callback) {
+  let message = {
+    from: 'agarwalayush161@gmail.com ',
+    to: data._id,
+    subject: 'StudentStartups Password Reset Link',
+    text: 'A password reset request was made from your account. Please click at the following link to reset your password: http://www.studentstartups.io/reset/' + data.token + 'The link can only be used once.\n\nThanks,\nTeam StudentStartups,\nColab Ventures'
+  };
+  server.send(message, callback);
+};

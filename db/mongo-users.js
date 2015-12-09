@@ -38,7 +38,7 @@ exports.verify = function (app, data, callback) {
       callback(null, doc);
     }
   };
-  collection.findOneAndUpdate(data, operation, onUpdate);
+  collection.findOneAndUpdate({_id: data._id, token: data.token}, operation, onUpdate);
 };
 
 exports.find = function (app, data, callback) {
@@ -81,4 +81,36 @@ exports.updateProfile = function (app, data, callback) {
       skills: data.skills
     }
   }, onUpdate);
+};
+
+exports.reset = function (app, data, callback) {
+  let collection = app.db.collection('users');
+  const onUpdate = function (err) {
+    if (!err) {
+      callback(null);
+    }
+  };
+  let operation = {
+    $set: {
+      token: data.token
+    }
+  };
+  collection.findOneAndUpdate({_id: data._id}, operation, onUpdate);
+};
+
+exports.passwordReset = function (app, data, callback) {
+  let collection = app.db.collection('users');
+  const onUppdate = function (err) {
+    if (!err) {
+      callback(null);
+    }
+  };
+  collection.findOneAndUpdate({_id: data._id, token: data.token}, {
+    $set: {
+      password: data.password
+    },
+    $unset: {
+      token: null
+    }
+  }, onUppdate);
 };
